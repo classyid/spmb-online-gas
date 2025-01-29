@@ -40,10 +40,15 @@ Sesuai kebijakan terbaru Kemendikbudristek, PPDB kini berubah menjadi SPMB denga
 5. Deploy aplikasi
 6. Mulai terima pendaftaran!
 
-## 🔧 Konfigurasi Sistem Domisili
-```javascript
-const DOMISILI_CONFIG = {
-  RADIUS_MAKSIMAL: 5, // dalam kilometer
-  PRIORITAS_DOMISILI: true,
-  DOKUMEN_WAJIB: ['KK', 'Surat Domisili']
+ **Setup Spreadsheet**
+   - Buat spreadsheet baru
+   - Buat 2 sheet: `config` dan `ppdb`
+   - Isi sheet config sesuai template:
+     ```
+     ID.PREFIX | PPDB
+     ID.YEAR | 2024
+     ID.DIGIT | 4
+     ID.LAST_NUMBER | 0
+     SEKOLAH.NAMA | SMA Digital Indonesia
+     SEKOLAH.LAT | -6.200000
 }
