@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base target="_top">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8fafc;
+    }
+    .animate-fade {
+      animation: fadeIn 0.5s ease-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-blue-600 to-blue-700">
+    <div class="container mx-auto px-4 py-16 text-center">
+      <h1 class="text-3xl md:text-4xl font-semibold text-white mb-4 animate-fade" id="namaSekolah"></h1>
+      <p class="text-lg text-blue-100 mb-8">Pendaftaran Peserta Didik Baru Tahun 2024/2025</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="<?= getScriptUrl() ?>?page=form" 
+           class="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-blue-50 transition-colors">
+          Daftar Sekarang
+        </a>
+        <button onclick="scrollToInfo()" 
+                class="bg-blue-700 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-800 transition-colors">
+          Informasi
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Info Cards -->
+  <div class="container mx-auto px-4 -mt-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Card 1 -->
+      <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+        <div class="text-blue-600 mb-4">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                  d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-medium mb-2">Mudah</h3>
+        <p class="text-gray-600">Proses pendaftaran online yang sederhana dan cepat</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+        <div class="text-blue-600 mb-4">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-medium mb-2">Aman</h3>
+        <p class="text-gray-600">Data pendaftaran tersimpan dengan aman</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+        <div class="text-blue-600 mb-4">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                  d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-medium mb-2">Cepat</h3>
+        <p class="text-gray-600">Notifikasi langsung melalui WhatsApp dan Email</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Alur Pendaftaran -->
+  <section id="info" class="py-20">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-semibold text-center mb-12">Alur Pendaftaran</h2>
+      <div class="max-w-3xl mx-auto">
+        <div class="space-y-6">
+          <!-- Step 1 -->
+          <div class="flex items-start">
+            <div class="flex-shrink-0 bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center">
+              1
+            </div>
+            <div class="ml-4">
+              <h3 class="font-medium mb-1">Isi Formulir</h3>
+              <p class="text-gray-600">Lengkapi formulir pendaftaran dengan data yang valid</p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex items-start">
+            <div class="flex-shrink-0 bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center">
+              2
+            </div>
+            <div class="ml-4">
+              <h3 class="font-medium mb-1">Upload Dokumen</h3>
+              <p class="text-gray-600">Upload pas foto dan scan ijazah/SKL</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex items-start">
+            <div class="flex-shrink-0 bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center">
+              3
+            </div>
+            <div class="ml-4">
+              <h3 class="font-medium mb-1">Verifikasi</h3>
+              <p class="text-gray-600">Tim kami akan memverifikasi data pendaftaran</p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="flex items-start">
+            <div class="flex-shrink-0 bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center">
+              4
+            </div>
+            <div class="ml-4">
+              <h3 class="font-medium mb-1">Pengumuman</h3>
+              <p class="text-gray-600">Hasil seleksi akan diumumkan melalui WhatsApp dan Email</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-blue-600 py-16">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-2xl font-semibold text-white mb-8">Mulai Pendaftaran Sekarang</h2>
+      <a href="<?= getScriptUrl() ?>?page=form" 
+         class="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-medium hover:bg-blue-50 transition-colors">
+        Daftar
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t py-8">
+    <div class="container mx-auto px-4 text-center text-gray-600">
+      <p class="mb-4" id="footerSekolah"></p>
+      <p class="text-sm">© 2024 PPDB Online. Hak Cipta Dilindungi.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Load data
+    google.script.run.withSuccessHandler(function(config) {
+      document.getElementById('namaSekolah').textContent = config.SEKOLAH.NAMA;
+      document.getElementById('footerSekolah').textContent = config.SEKOLAH.NAMA;
+    }).getConfig();
+
+    // Smooth scroll
+    function scrollToInfo() {
+      document.getElementById('info').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
