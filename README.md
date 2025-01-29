@@ -27,10 +27,10 @@ Sesuai kebijakan terbaru Kemendikbudristek, PPDB kini berubah menjadi SPMB denga
 - Dukungan multi-platform
 
 ## 📋 Prasyarat
-- Akun Google Workspace for Education
+- Akun Google Workspace
 - Google Spreadsheet
 - Google Drive
-- Akun WhatsApp Gateway (opsional)
+- WhatsApp Gateway (mpedia)
 
 ## ⚙️ Panduan Implementasi
 1. Clone repository
@@ -45,10 +45,20 @@ Sesuai kebijakan terbaru Kemendikbudristek, PPDB kini berubah menjadi SPMB denga
    - Buat 2 sheet: `config` dan `ppdb`
    - Isi sheet config sesuai template:
      ```
-     ID.PREFIX | PPDB
-     ID.YEAR | 2024
-     ID.DIGIT | 4
-     ID.LAST_NUMBER | 0
-     SEKOLAH.NAMA | SMA Digital Indonesia
-     SEKOLAH.LAT | -6.200000
+     Key	Value
+SEKOLAH.NAMA	PPDB WEB APPS
+SEKOLAH.LAT	<lat>
+SEKOLAH.LONG	<long>
+NOTIF.WA.API_KEY	<apikey>
+NOTIF.WA.SENDER	<sender>
+NOTIF.WA.ENDPOINT	https://mpedia/send-message
+NOTIF.TELEGRAM.BOT_TOKEN	<token>
+NOTIF.TELEGRAM.CHAT_ID	<chatID>
+NOTIF.EMAIL.SENDER_NAME	INFO.PPDB
+ID.PREFIX	SPMB
+ID.YEAR	24
+ID.DIGIT	4
+ID.LAST_NUMBER	9
+UPLOAD.FOLDER_ID	<idFolder>
+LANDING.IMAGE_ID	<imgID>
 }
